@@ -6,3 +6,6 @@ Css
 Html
 Github
 Agile
+UX Design
+Figma
+C#
