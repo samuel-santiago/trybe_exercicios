@@ -6,3 +6,5 @@ Css
 Html
 Github
 Agile
+Inteligência Emocional
+Escuta Ativa
