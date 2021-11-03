@@ -1,0 +1,11 @@
+Internet
+Unix
+Bash
+JavaScript
+Css
+Html
+Github
+Agile
+UX Design
+Figma
+C#
