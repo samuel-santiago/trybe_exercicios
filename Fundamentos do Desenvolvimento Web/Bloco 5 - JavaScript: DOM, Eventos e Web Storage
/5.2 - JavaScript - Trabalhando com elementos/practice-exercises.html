@@ -58,20 +58,31 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      // EX1
       let h1 = document.createElement('h1');
       h1.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(h1)
-
+      
+      // EX2
       let main = document.createElement('main');
       main.classList.add = 'main-content';
       document.body.appendChild(main);
-
-      let section = document.createElement('section');
-      section.classList.add = 'center-content';
-      main.appendChild(section);
       
+      // EX3
+      let section1 = document.createElement('section');
+      section1.classList.add = 'center-content';
+      main.appendChild(section1);
+      
+      // EX4
+      let paragraph = document.createElement('p');
+      paragraph.innerText = 'Esse é o meu texto'
+      section.appendChild(paragraph)
 
-      // console.log(h1)
+      // EX5
+      let section2 = document.createElement('section');
+      section2.classList.add = 'left-content';
+      main.appendChild(section2)
+
     </script>
   </body>
 </html>
