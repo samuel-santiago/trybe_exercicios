@@ -22,15 +22,13 @@ const corrigirH1 = () => {
 }
 corrigirH1();
 
-//não está dando certo as duas últimas de ontem...
 
 let paragraphs = document.getElementsByTagName('p');
 
 const transformarMaiúsculo = (input) => {
-  for (let i in input){
-    input[i].style.textTransform = '';
+  for (let paragraph of input){
+    paragraph.style.textTransform = 'uppercase'
   }
-  return input;
 }
 transformarMaiúsculo(paragraphs);
 
@@ -40,5 +38,5 @@ const showParagraphs = (input) => {
     console.log(i.innerText)
   }
 }
-showParagraphs(transformarMaiúsculo);
+showParagraphs(paragraphs);
 
