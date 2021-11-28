@@ -9,10 +9,10 @@ ondeVoceEsta.firstElementChild.innerHTML = "OK";
 
 // Acesse o primeiroFilho a partir de pai .
 const pai = document.querySelector('#pai');
-// pai.firstElementChild;
+pai.firstElementChild;
 
 // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
-
+ondeVoceEsta.previousElementSibling;
 
 // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
 
