@@ -26,6 +26,11 @@ pai.children[2];
 
 // PARTE 2
 //Crie um irmão para elementoOndeVoceEsta .
+const siblingOndeVoceEsta = document.createElement('section');
+siblingOndeVoceEsta.id = "siblingOndeVoceEsta";
+pai.appendChild(siblingOndeVoceEsta);
+console.log(pai);
+
 // Crie um filho para elementoOndeVoceEsta .
 // Crie um filho para primeiroFilhoDoFilho .
-A partir desse filho criado, acesse terceiroFilho
+// A partir desse filho criado, acesse terceiroFilho
