@@ -37,4 +37,9 @@ childOndeVoceEsta.id = "childOndeVoceEsta";
 ondeVoceEsta.appendChild(childOndeVoceEsta);
 
 // Crie um filho para primeiroFilhoDoFilho .
+const childPrimeiroFilhoDoFilho = document.createElement('section');
+childPrimeiroFilhoDoFilho.id = "childPrimeiroFilhoDoFilho";
+pai.children[1].children[0].appendChild(childPrimeiroFilhoDoFilho);
+// appendChild(childPrimeiroFilhoDoFilho);
+
 // A partir desse filho criado, acesse terceiroFilho
