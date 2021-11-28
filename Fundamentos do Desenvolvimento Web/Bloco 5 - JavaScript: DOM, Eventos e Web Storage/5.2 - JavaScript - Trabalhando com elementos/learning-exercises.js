@@ -18,4 +18,6 @@ ondeVoceEsta.previousElementSibling;
 ondeVoceEsta.nextSibling;
 
 // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+ondeVoceEsta.nextElementSibling;
+
 // Agora acesse o terceiroFilho a partir de pai .
