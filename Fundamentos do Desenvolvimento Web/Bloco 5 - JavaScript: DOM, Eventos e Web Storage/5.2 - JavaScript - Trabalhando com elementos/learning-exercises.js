@@ -1,3 +1,4 @@
+// PARTE 1
 // Acesse o elemento elementoOndeVoceEsta .
 const ondeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
 
@@ -22,3 +23,9 @@ ondeVoceEsta.nextElementSibling;
 
 // Agora acesse o terceiroFilho a partir de pai .
 pai.children[2];
+
+// PARTE 2
+//Crie um irmão para elementoOndeVoceEsta .
+// Crie um filho para elementoOndeVoceEsta .
+// Crie um filho para primeiroFilhoDoFilho .
+A partir desse filho criado, acesse terceiroFilho
