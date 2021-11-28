@@ -21,3 +21,4 @@ ondeVoceEsta.nextSibling;
 ondeVoceEsta.nextElementSibling;
 
 // Agora acesse o terceiroFilho a partir de pai .
+pai.children[2];
