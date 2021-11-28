@@ -32,5 +32,9 @@ pai.appendChild(siblingOndeVoceEsta);
 console.log(pai);
 
 // Crie um filho para elementoOndeVoceEsta .
+const childOndeVoceEsta = document.createElement('section');
+childOndeVoceEsta.id = "childOndeVoceEsta";
+ondeVoceEsta.appendChild(childOndeVoceEsta);
+
 // Crie um filho para primeiroFilhoDoFilho .
 // A partir desse filho criado, acesse terceiroFilho
