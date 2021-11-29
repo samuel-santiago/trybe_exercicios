@@ -30,7 +30,6 @@ const siblingOndeVoceEsta = document.createElement('section');
 siblingOndeVoceEsta.id = "siblingOndeVoceEsta";
 pai.appendChild(siblingOndeVoceEsta);
 console.log(pai);
-
 // Crie um filho para elementoOndeVoceEsta .
 const childOndeVoceEsta = document.createElement('section');
 childOndeVoceEsta.id = "childOndeVoceEsta";
@@ -40,6 +39,7 @@ ondeVoceEsta.appendChild(childOndeVoceEsta);
 const childPrimeiroFilhoDoFilho = document.createElement('section');
 childPrimeiroFilhoDoFilho.id = "childPrimeiroFilhoDoFilho";
 pai.children[1].children[0].appendChild(childPrimeiroFilhoDoFilho);
-// appendChild(childPrimeiroFilhoDoFilho);
+
 
 // A partir desse filho criado, acesse terceiroFilho
+childPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
