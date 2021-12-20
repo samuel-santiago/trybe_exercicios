@@ -29,12 +29,13 @@ const battleMembers = { mage, warrior, dragon };
 
 
   const dragonDamage = () => Math.random() * (dragon.strength - 15)  + 15;
-  console.log(dragonDamage())
+  console.log(dragonDamage());
+
+// REF https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/
 
 
+// 2 - Crie uma função que retorna o dano causado pelo warrior .
+// O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
 
-// function randomNumber(min, max) { 
-//   return Math.random() * (max - min) + min;
-// } 
-
-// https://www.geeksforgeeks.org/how-to-generate-random-number-in-given-range-using-javascript/
+const warriorDamage = () => Math.random() * ((warrior.strength*2) - warrior.strength)  + warrior.strength;
+console.log(warriorDamage())
