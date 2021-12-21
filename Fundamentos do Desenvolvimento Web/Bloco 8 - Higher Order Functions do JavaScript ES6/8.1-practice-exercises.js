@@ -16,7 +16,7 @@ const createObj = (fullName) => {
   }
   return object;
 }
-console.log(newEmployees(createObj));
+console.log(newEmployees(createObj ));
 
 
 // 2 - Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
@@ -42,17 +42,15 @@ const evaluatorGrades = (array1, array2, callback) => callback(array1, array2);
 
 const compareGrades = (array1, array2) => {
   let result = 0;
-  RIGHT_ANSWERS.forEach((element, index) => {
-      if ( array2[index] === 'N.A'){
-        continue;
-      }
+  RIGHT_ANSWERS.forEach((_,index) => {
+      if ( array2[index] === 'N.A') return;
       else if (array1[index] === array2[index]) {
         result += 1;
       }
       else {
         result -= .5;
       }
+    })
     return result;
-  })
 }
 console.log(evaluatorGrades(RIGHT_ANSWERS, STUDENT_ANSWERS, compareGrades));
