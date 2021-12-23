@@ -92,5 +92,55 @@ const findNameWithFiveLetters = (name) => {
   return name.length === 5;
 }
 
-console.log(names.find(findNameWithFiveLetters));
+const verificando = () => {
+  if (names.find(findNameWithFiveLetters)){
+    console.log(names.find(findNameWithFiveLetters));
+  }
+  else 
+  {  console.log('não tem nome com essa qtde de letras');
+  }
+  };
+console.log(verificando());
 
+
+// 3 - Utilize o find para encontrar a música com id igual a 31031685 , caso ela exista:
+
+const musicas = [
+  { id: '31031685', title: 'Partita in C moll BWV 997' },
+  { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
+  { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
+]
+
+const findMusic = (id) => {
+   return musicas.find((elemento) => {
+    if (elemento.id === id){
+      return elemento;
+    }
+      return 'não tem';
+  });
+}
+console.log(findMusic('31031685'));
+
+
+
+
+
+var arrayofObjects = [
+  { name:"Adam", profession:"Engineer", company: "Google" },
+  { name:"Sam", profession:"Manager", company: "Amazon" },
+  { name:"Gerogia", profession:"Designer", company: "Netflix" },
+  { name:"Kate", profession:"Engineer", company: "Microscoft" },
+  { name:"James", profession:"Sales", company: "Amazon" },
+];
+
+
+const isFromCompany = (company) => {
+ return arrayofObjects.find((obj) => obj.company === company);
+}
+console.log(isFromCompany('Google'))
+
+// arrayofObjects.find(object => {
+//   if (object.company === 'Amazon') {
+//     console.log('Amazon Employee: ', object.name);
+//   }
+// });
