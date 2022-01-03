@@ -121,26 +121,13 @@ const findMusic = (id) => {
 }
 console.log(findMusic('31031685'));
 
+// Para fixar
+// 1 - Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false , use some ;
 
+const names2 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-
-
-var arrayofObjects = [
-  { name:"Adam", profession:"Engineer", company: "Google" },
-  { name:"Sam", profession:"Manager", company: "Amazon" },
-  { name:"Gerogia", profession:"Designer", company: "Netflix" },
-  { name:"Kate", profession:"Engineer", company: "Microscoft" },
-  { name:"James", profession:"Sales", company: "Amazon" },
-];
-
-
-const isFromCompany = (company) => {
- return arrayofObjects.find((obj) => obj.company === company);
+const hasName = (arr, name) => {
+  return arr.some((elem) => elem === name);
 }
-console.log(isFromCompany('Google'))
 
-// arrayofObjects.find(object => {
-//   if (object.company === 'Amazon') {
-//     console.log('Amazon Employee: ', object.name);
-//   }
-// });
+console.log(hasName(names2, 'Ana'));
