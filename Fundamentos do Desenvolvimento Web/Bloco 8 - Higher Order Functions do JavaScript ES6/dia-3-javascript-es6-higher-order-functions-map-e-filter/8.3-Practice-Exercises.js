@@ -82,8 +82,8 @@ console.log(formatedBookNames(books));
 
 
 
-// 2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado.  O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
-// Dica: use as funções map , sort
+// // 2 - Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado.  O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
+// // Dica: use as funções map , sort
 
 expectedResult = [
   {
@@ -121,3 +121,59 @@ function nameAndAge(arrayOfBooks) {
   ))
 }
 console.log(nameAndAge(books));
+
+
+
+// 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
+// Dica: use a função filter ;
+
+expectedResult = [
+  { 
+    id: 1,
+    name: 'As Crônicas de Gelo e Fogo',
+    genre: 'Fantasia',
+    author: { name: 'George R. R. Martin', birthYear: 1948 },
+    releaseYear: 1991
+  },
+  {
+    id: 2,
+    name: 'O Senhor dos Anéis',
+    genre: 'Fantasia',
+    author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
+    releaseYear: 1954
+  },
+  {
+    id: 3,
+    name: 'Fundação',
+    genre: 'Ficção Científica',
+    author: { name: 'Isaac Asimov', birthYear: 1920 },
+    releaseYear: 1951
+  },
+  {
+    id: 4,
+    name: 'Duna',
+    genre: 'Ficção Científica',
+    author: { name: 'Frank Herbert', birthYear: 1920 },
+    releaseYear: 1965
+  }
+];
+
+function fantasyOrScienceFiction(arrayBooks) {
+  return arrayBooks.filter( (book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica' );
+}
+console.log(fantasyOrScienceFiction(books));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
