@@ -126,8 +126,7 @@ console.log(findMusic('31031685'));
 
 const names2 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-const hasName = (arr, name) => {
-  return arr.some((elem) => elem === name);
-}
-
-console.log(hasName(names2, 'Ana'));
+const hasName = (array, name) => {
+  return array.some((elem) => elem === name);
+} 
+console.log(hasName(names2, 'José'));
