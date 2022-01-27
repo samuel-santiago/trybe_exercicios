@@ -8,11 +8,18 @@ class App extends react.Component {
     super()
     this.handleClick = this.handleClick.bind(this);
     console.log('constructor: ',this)
+    this.state = {
+      clickButton1: 0,
+      clickButton2: 0,
+      clickButton3: 0,
+    }
   }
 
-  handleClick = () => {
-    console.log(this)
-    console.log('Clicou')
+  handleClick (string) {
+  
+
+    console.log(string)
+
   }
 
   render(){
