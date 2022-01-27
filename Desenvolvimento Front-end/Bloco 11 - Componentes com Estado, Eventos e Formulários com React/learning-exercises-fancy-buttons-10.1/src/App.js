@@ -1,29 +1,23 @@
 import react from 'react';
 import './App.css';
 
-const handleClick = () => {
-  console.log('Evento Clicado1')
-}
-
-const handleClick2 = () => {
-  console.log('Evento Clicado2')
-}
-
-const handleClick3 = () => {
-  console.log('Evento Clicado3')
-}
 
 class App extends react.Component {
+
+   handleClick = (string) => {
+    console.log(string);
+  }
+
   render(){
     return (
       <>
-        <button key='botão1' onClick={handleClick}>
+        <button key={'botão1'} onClick={(evt) => this.handleClick(evt.target.innerText)}>
           Botão1
         </button>
-        <button key='botão2' onClick={handleClick2}>
+        <button key='botão2' onClick={(evt) => this.handleClick(evt.target.innerText)}>
           Botão2
         </button>
-        <button key='botão3' onClick={handleClick3}>
+        <button key='botão3' onClick={(evt) => this.handleClick(evt.target.innerText)}>
           Botão3
         </button>
     </>
