@@ -23,7 +23,6 @@ class App extends react.Component {
     }));
     console.log(this.state)
     console.log(string)
-
   }
 
   render(){
