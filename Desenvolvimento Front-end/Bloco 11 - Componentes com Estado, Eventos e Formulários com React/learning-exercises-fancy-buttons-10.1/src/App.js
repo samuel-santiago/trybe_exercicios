@@ -4,8 +4,16 @@ import './App.css';
 
 class App extends react.Component {
 
-   handleClick = (string) => {
-    console.log(string);
+  // constructor () {
+  //   super()
+  //   this.handleClick = this.handleClick.bind(this);
+  //   console.log('constructor: ',this)
+  // }
+
+  handleClick = () => {
+    // Essa chamada ao `this` retorna `undefined`? !
+    console.log(this)
+    console.log('Clicou')
   }
 
   render(){
@@ -24,5 +32,19 @@ class App extends react.Component {
     )
   }
 }
+
+  // class App extends react.Component {
+  //   handleClick () {
+  //     // Essa chamada ao `this` retorna `undefined`? !
+  //     console.log(this)
+  //     console.log('Clicou')
+  //   }
+  
+  //   render() {
+  //     // Já essa chamada ao `this`, feita de dentro da função `render`, retorna o objeto que esperamos
+  //     // console.log(this)
+  //     return <button onClick={this.handleClick}>Meu botão</button>
+  //   }
+  // }
 
 export default App;
