@@ -16,8 +16,12 @@ class App extends react.Component {
   }
 
   handleClick (string) {
-  
-
+    this.setState((previousValue) => ({
+      clickButton1: previousValue.clickButton1 +1,
+      clickButton2: previousValue.clickButton2 +1,
+      clickButton3: previousValue.clickButton3 +1,
+    }));
+    console.log(this.state)
     console.log(string)
 
   }
