@@ -1,69 +1,53 @@
 import react from "react";
 import './Form.css'
 
+// Para fixar
+// 1 - Crie um formulário com um campo select , dois inputs de tipo diferente, uma textarea e faça de um deles um componente controlado, ou seja, elementos do formulário controlados pelo Estado
+// 2 - Baixe a React Developer Tools e veja, nela, o dado inserido no elemento controlado sendo salvo no Estado.
+
 class Form extends react.Component {
-  constructor() {
-    super()
-
-    this.handleTextAreaChange = this.handleTextAreaChange.bind(this);
-
+  
+  constructor(){
+    super();
+    this.handleChangeEvent = this.handleChangeEvent.bind(this);
     this.state={
-      estadoFavorito: '',
-      email: '',
-      idade: 0,
-      vaiComparecer: false,
-      palavraChaveFavorita: ''
+      State: '',
+      Name: '',
+      Age: '',
+      Checkbox: true,
+      Description: '',
     }
   }
-  
-  handleTextAreaChange (evento){
+
+  handleChangeEvent(evt){
+    const name = evt.target.name;
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
     this.setState({
-      estadoFavorito: evento.target.value
+
+      [name]:value, 
     })
   }
+  
   render(){
+    
     return(
-      <div className="Form">
-        <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
-        <form className="form">
+      <form className="form" type="Submit">
+        <select name="State" placeholder="State" onChange={this.handleChangeEvent}>
+          <option>Sudeste</option>
+          <option>Centro-Oeste</option>
+          <option>Nordeste</option>
+          <option>Sul</option>
+          <option>Norte</option>
+        </select>
 
-          <label>
-            Diga qual o seu Estado favorito! De React ou do Brasil, você decide!
-              <textarea name="estadoFavorito" value={this.state.estadoFavorito} onChange={this.handleTextAreaChange } />
-          </label>
+          <input type="text" name="Name" placeholder="Name" required onChange={this.handleChangeEvent} value={this.state.name}/>
+          <input type="Number" name="Age" placeholder="Age" max="100" min="18" required onChange={this.handleChangeEvent} value={this.state.age}/>
+          <input type="checkbox" name="Checkbox" placeholder="Checkbox" onChange={this.handleChangeEvent} value={this.state.checkbox}/>
 
-          <label>
-            Email
-            <input name="email" type="email" />
-          </label>
 
-          <label>
-            Nome
-            <input name="nome" type="text" />
-          </label>
-        </form>
-
-          <label>
-            Idade 
-            <input type="number" name="idade" />
-          </label>
-
-          <label>
-            Vai comparecer à conferência?
-            <input type="checkbox" name="vaiComparecer" />
-          </label>
-
-          <label>
-            Escolha sua palavra chave favorita:
-            <select name="palavraChaveFavorita" >
-              <option value=""></option>
-              <option value="estado">Estado</option>
-              <option value="evento">Evento</option>
-              <option value="props">Props</option>
-              <option value="hooks">Hooks</option>
-            </select>
-          </label>
-      </div>
+        <textarea name="Description" cols="30" rows="5" maxLength="240" placeholder="Description" onChange={this.handleChangeEvent} required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     )
   }
 }
