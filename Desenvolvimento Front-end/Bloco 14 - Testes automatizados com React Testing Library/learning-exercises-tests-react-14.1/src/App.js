@@ -42,6 +42,7 @@ class App extends Component {
         />
         <input id="btn-id" type="button" value="Voltar" />
         <ValidEmail email={ saveEmail }/>
+        
       </div>
     );
   }
