@@ -41,7 +41,6 @@ class App extends Component {
           onClick={ () => this.changeSaveEmail(email) }
         />
         <input id="btn-id" type="button" value="Voltar" />
-        {/* <h2 data-testid="id-email-user">{`Valor: ${saveEmail}`}</h2> */}
         <ValidEmail email={ saveEmail }/>
       </div>
     );
