@@ -37,6 +37,12 @@
         colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
         index: 0,
       };
+      
+      const NEXT_COLOR = (state) => ({
+        type: "NEXT_COLOR",
+        index: !state.index,
+      })
+
       const reducer = (state = ESTADO_INICIAL, action) => {
         switch (action.type) {
         default:
