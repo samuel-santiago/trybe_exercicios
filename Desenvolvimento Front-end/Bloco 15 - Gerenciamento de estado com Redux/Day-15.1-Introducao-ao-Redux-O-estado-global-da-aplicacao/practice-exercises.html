@@ -62,7 +62,7 @@
         return state
          }
       }
-      
+
       const store = Redux.createStore(
         reducer,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -72,7 +72,6 @@
       btnPrvsColor.addEventListener('click', () => store.dispatch(PREVIOUS_COLOR()))
       const btnNxtColor = document.getElementById('next');
       btnNxtColor.addEventListener('click', ()=> store.dispatch(NEXT_COLOR()))
-
     </script>
   </body>
 </html>
