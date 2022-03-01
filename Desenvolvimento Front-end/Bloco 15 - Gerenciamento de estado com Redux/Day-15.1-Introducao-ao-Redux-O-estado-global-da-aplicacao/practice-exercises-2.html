@@ -36,12 +36,14 @@
         cidade: 'São Paulo',
       };
       
-      const CHANGE_NAME = ({
-        type: "CHANGE_NAME"
+      const CHANGE_NAME = (nome) => ({
+        type: "CHANGE_NAME",
+        nome,
       })
 
-      const CHANGE_SOBRENAME = ({
-        type: "CHANGE_NAME"
+      const CHANGE_LASTNAME = (sobrenome) => ({
+        type: "CHANGE_LASTNAME",
+        sobrenome,
       })
 
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
@@ -49,12 +51,12 @@
           case 'CHANGE_NAME':
             return {
               ...state,
-              nome: state.nome
+              nome: action.nome
             }
-          case 'CHANGE_SOBRENAME':
+          case 'CHANGE_LASTNAME':
             return {
               ...state,
-              sobrenome: state.sobrenome
+              sobrenome: action.sobrenome
             }
           default:
             return state;
@@ -66,12 +68,12 @@
           case 'CHANGE_NAME':
             return {
               ...state,
-              nome: state.nome
+              nome: action.nome
             }
-          case 'CHANGE_SOBRENAME':
+          case 'CHANGE_LASTNAME':
             return {
               ...state,
-              sobrenome: state.sobrenome
+              sobrenome: action.sobrenome
             }
           default:
             return state;
@@ -86,6 +88,19 @@
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
       )
 
+    window.onload = () => {
+      let index = 0;
+      setTimeout(() => {
+        const arrayOfNames = ["samantha", "Rafael", "Letícia", "Luis"]
+        const arrayOfLastNames = ['silva', 'santiago', 'nascimento', 'souza']
+        index === arrayOfNames.length - 1 ? index = 0 : index += 1;
+      store.dispatch(
+        CHANGE_NAME(arrayOfNames[index]))
+      store.dispatch(
+        CHANGE_LASTNAME(arrayOfLastNames[index]))
+     }, 5000 );
+    //  clearInterval(interval);
+    };
       
     </script>
   </body>
