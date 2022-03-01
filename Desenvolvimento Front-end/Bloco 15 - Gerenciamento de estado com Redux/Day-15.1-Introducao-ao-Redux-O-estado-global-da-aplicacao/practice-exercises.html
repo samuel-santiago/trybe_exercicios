@@ -31,6 +31,7 @@
       <p>Color: <span id="value">white</span></p>
       <button id="previous">Previous color</button>
       <button id="next">Next color</button>
+      <button id="random">Random color</button>
     </div>
     <script>
       const ESTADO_INICIAL = {
@@ -46,6 +47,21 @@
         type: "PREVIOUS_COLOR",
       })
 
+      const RANDOM_COLOR = () => ({
+        type: "RANDOM_COLOR",
+      })
+
+    function criarCor() {
+    const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    let cor = '#';
+    const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+    for (let i = 0; i < 6; i += 1) {
+        cor += oneChar[aleatorio()];
+    }
+    return cor;
+    }
+
+
       const reducer = (state = ESTADO_INICIAL, action) => {
         switch (action.type) {
           case 'NEXT_COLOR': 
@@ -57,6 +73,11 @@
             return {
               ...state,
               index: state.index === 0 ? state.colors.length -1: state.index -1,
+            }
+          case 'RANDOM_COLOR':
+            return {
+              ...state,
+              colors: [...state.colors, criarCor()]
             }
         default:
         return state
@@ -72,13 +93,15 @@
       btnPrvsColor.addEventListener('click', () => store.dispatch(PREVIOUS_COLOR()))
       const btnNxtColor = document.getElementById('next');
       btnNxtColor.addEventListener('click', ()=> store.dispatch(NEXT_COLOR()))
+      const btnRdmColor = document.getElementById('random');
+      btnRdmColor.addEventListener('click', () => store.dispatch(RANDOM_COLOR()))
       
       store.subscribe( ()=> {  
         const { colors, index } = store.getState()
         
         const colorBlockName = document.getElementById('value');
         const colorBlockContainer = document.getElementById('container');
-
+        
         colorBlockName.innerHTML=`${colors[index]}`;
         colorBlockContainer.style.backgroundColor=`${colors[index]}`
       })
