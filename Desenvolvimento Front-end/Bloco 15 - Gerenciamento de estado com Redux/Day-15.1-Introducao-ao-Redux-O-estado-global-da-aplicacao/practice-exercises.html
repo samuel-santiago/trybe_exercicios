@@ -72,6 +72,17 @@
       btnPrvsColor.addEventListener('click', () => store.dispatch(PREVIOUS_COLOR()))
       const btnNxtColor = document.getElementById('next');
       btnNxtColor.addEventListener('click', ()=> store.dispatch(NEXT_COLOR()))
+      
+      store.subscribe( ()=> {  
+        const { colors, index } = store.getState()
+        
+        const colorBlockName = document.getElementById('value');
+        const colorBlockContainer = document.getElementById('container');
+
+        colorBlockName.innerHTML=`${colors[index]}`;
+        colorBlockContainer.style.backgroundColor=`${colors[index]}`
+      })
+      
     </script>
   </body>
 </html>
