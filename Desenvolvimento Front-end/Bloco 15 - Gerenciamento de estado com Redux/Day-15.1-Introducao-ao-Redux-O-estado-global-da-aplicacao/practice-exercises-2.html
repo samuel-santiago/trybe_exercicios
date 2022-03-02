@@ -87,21 +87,40 @@
         rootReducer, 
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
       )
+      
+      const ArrOfNamesSpan = document.querySelectorAll('[id^="nome"]');
+      const ArrOfLastNamesSpan = document.querySelectorAll('[id^="sobrenome"]');
+
 
     window.onload = () => {
-      let index = 0;
-      setTimeout(() => {
-        const arrayOfNames = ["samantha", "Rafael", "Letícia", "Luis"]
-        const arrayOfLastNames = ['silva', 'santiago', 'nascimento', 'souza']
-        index === arrayOfNames.length - 1 ? index = 0 : index += 1;
-      store.dispatch(
-        CHANGE_NAME(arrayOfNames[index]))
-      store.dispatch(
-        CHANGE_LASTNAME(arrayOfLastNames[index]))
-     }, 5000 );
-    //  clearInterval(interval);
-    };
       
+      let index = 0;
+
+      const interval = setInterval(() => {
+        const arrayOfNames = ["Samantha", "Rafael", "Letícia", "Luis"]
+        const arrayOfLastNames = ['Silva', 'Santiago', 'Nascimento', 'Souza']
+
+        store.dispatch(
+          CHANGE_NAME(arrayOfNames[index]))
+        store.dispatch(
+          CHANGE_LASTNAME(arrayOfLastNames[index]))     
+          index === arrayOfNames.length - 1 ? index = 0 : index += 1;
+      }, 3000 );
+
+      // clearInterval(interval);
+
+      store.subscribe(()=> {
+        const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
+
+        ArrOfNamesSpan[0].innerHTML=`${meuPrimeiroReducer.nome}`
+        ArrOfNamesSpan[1].innerHTML=`${meuSegundoReducer.nome}`
+
+        ArrOfLastNamesSpan[0].innerHTML=`${meuPrimeiroReducer.sobrenome}`
+        ArrOfLastNamesSpan[1].innerHTML=`${meuSegundoReducer.sobrenome}`
+
+      })
+    };
+    
     </script>
   </body>
 </html>
