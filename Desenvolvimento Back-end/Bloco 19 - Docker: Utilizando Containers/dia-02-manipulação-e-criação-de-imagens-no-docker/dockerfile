@@ -1,0 +1,7 @@
+FROM chuanwen/cowsay
+
+ENTRYPOINT ()
+
+WORKDIR /dir/dir/dir/ir
+
+CMD 
