@@ -8,5 +8,8 @@
     "imc": "node imc"
   },
   "author": "samukinha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
