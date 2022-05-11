@@ -6,7 +6,7 @@
 
   "scripts": {
     "start": "node index.js",
-    "test": "mocha test.js"
+    "test": "mocha tests"
   },
   
   "author": "sam",
