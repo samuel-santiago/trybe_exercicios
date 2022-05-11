@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha learning-exercises-22.3/tests"
   },
   "author": "sam",
   "license": "ISC",
