@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha learning-exercises-22.3/tests"
+    "test": "mocha tests"
   },
   "author": "sam",
   "license": "ISC",
