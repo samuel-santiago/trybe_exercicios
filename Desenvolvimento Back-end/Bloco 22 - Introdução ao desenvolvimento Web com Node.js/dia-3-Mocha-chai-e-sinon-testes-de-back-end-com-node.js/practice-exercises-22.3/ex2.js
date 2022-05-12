@@ -4,3 +4,11 @@
 // Descreva todos os cenário de teste utilizando describes;
 // Descreva todos os testes que serão feitos utilizando its;
 // Crie as asserções validando se os retornos de cada cenário tem o tipo e o valor esperado.
+
+const verifyNumber = (number) => {
+  if (number > 0 ) return 'positivo';
+  else if (number === 0 ) return 'neutro';
+  return 'negativo';
+}
+
+module.exports = verifyNumber;
