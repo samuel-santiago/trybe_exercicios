@@ -5,12 +5,12 @@
 // Descreva todos os testes que serão feitos utilizando its;
 // Crie as asserções validando se os retornos de cada cenário tem o tipo e o valor esperado.
 
-const { expect } = require('chai');
+const { expect, assert } = require('chai');
 const {describe, it} = require('mocha');
 
 const verifyNumber = require('../ex2');
 
-describe('Testar VerifyNumber', ()=> {
+describe('EX 1: \n Testar VerifyNumber', ()=> {
   it('Se número passado for maior que 0 deverá retornar "positivo"', () => {
     expect(verifyNumber(5)).to.be.equal('positivo');
   })
@@ -19,5 +19,8 @@ describe('Testar VerifyNumber', ()=> {
   })
   it('Se número passado for IGUAL que 0 deverá retornar "neutro"', () => {
     expect(verifyNumber(0)).to.be.equal('neutro');
+  })
+  it('Se não for NUMBER, retornar erro: "o valor deve ser um número"', () => {
+    assert.throws(()=> verifyNumber('string'), 'o valor deve ser um número');
   })
 })
