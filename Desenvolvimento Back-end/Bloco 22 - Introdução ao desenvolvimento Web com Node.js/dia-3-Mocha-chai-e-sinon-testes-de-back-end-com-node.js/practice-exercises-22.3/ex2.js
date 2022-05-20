@@ -8,14 +8,14 @@
 // Implemente em sua função tal validação para que o teste passe.
 
 const verifyNumber = (number) => {
-  if(typeof number !== 'number') throw new Error('Não é número')
   try {
+    if(typeof number !== 'number') throw new Error('o valor deve ser um número')
     if (number > 0 ) return 'positivo';
     else if (number === 0 ) return 'neutro';
     return 'negativo';
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
   }
 }
-
+// verifyNumber('string');
 module.exports = verifyNumber;

@@ -21,6 +21,6 @@ describe('EX 1: \n Testar VerifyNumber', ()=> {
     expect(verifyNumber(0)).to.be.equal('neutro');
   })
   it('Se não for NUMBER, retornar erro: "o valor deve ser um número"', () => {
-    assert.throws(()=> verifyNumber('string'), 'o valor deve ser um número');
+    expect(()=> verifyNumber('string')).throw ('o valor deve ser um número');
   })
 })
