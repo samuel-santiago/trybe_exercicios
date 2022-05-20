@@ -1,0 +1,15 @@
+{
+  "name": "practice-exercises-22.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex1.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "sam",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
